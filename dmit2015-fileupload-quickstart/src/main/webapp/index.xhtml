@@ -1,0 +1,175 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/template-dashboard.xhtml">
+
+	<ui:param name="title" value="DMIT2015 - Enterprise Application Development" />
+	
+	<ui:define name="externalstyles">
+		<link rel="stylesheet" href="#{resource['default:css/carousel.css']}" />	
+	</ui:define>
+	
+	<ui:define name="maincontent">
+		<h1>Java EE Application Development</h1>
+
+	   <!-- Carousel
+	    ================================================== -->
+	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	      <!-- Indicators -->
+	      <ol class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	        <li data-target="#myCarousel" data-slide-to="2"></li>
+	        <li data-target="#myCarousel" data-slide-to="3"></li>
+	        <li data-target="#myCarousel" data-slide-to="4"></li>
+	        <li data-target="#myCarousel" data-slide-to="5"></li>
+	        <li data-target="#myCarousel" data-slide-to="6"></li>
+	        <li data-target="#myCarousel" data-slide-to="7"></li>
+	      </ol>
+	      <div class="carousel-inner">
+	        <div class="item active">
+	          <div class="container">
+	            <div class="carousel-caption">
+	          	  <img src="#{resource['default:images/jeett_dt_001.png']}" width="500" height="300" alt="Multitiered Applications" />
+	          	  <p>Multitiered Applications</p>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="item">
+	          <div class="container">
+	            <div class="carousel-caption">
+	          	  <img src="#{resource['default:images/jeett_dt_002.png']}" width="500" height="300" alt="Server Communication" />
+	          	  <p>Server Communication</p>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="item">
+	          <div class="container">
+	            <div class="carousel-caption">
+	          	  <img src="#{resource['default:images/jeett_dt_003.png']}" width="500" height="300" alt="Web Tier and Java EE Applications" />
+	          	  <p>Web Tier and Java EE Applications</p>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="item">
+	          <div class="container">
+	            <div class="carousel-caption">
+	          	  <img src="#{resource['default:images/jeett_dt_004.png']}" width="500" height="300" alt="Business and EIS Tiers" />
+	          	  <p>Business and EIS Tiers</p>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="item">
+	          <div class="container">
+	            <div class="carousel-caption">
+	          	  <img src="#{resource['default:images/jeett_dt_005.png']}" width="500" height="300" alt="Java EE Server and Containers" />
+	          	  <p>Java EE Server and Containers</p>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="item">
+	          <div class="container">
+	            <div class="carousel-caption">
+	          	  <img src="#{resource['default:images/jeett_dt_006.png']}" width="500" height="300" alt="Java EE Containers" />
+	          	  <p>Java EE Containers</p>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="item">
+	          <div class="container">
+	            <div class="carousel-caption">
+	          	  <img src="#{resource['default:images/jeett_dt_007.png']}" width="500" height="300" alt="Java EE APIs in the Web Container" />
+	          	  <p>Java EE APIs in the Web Container</p>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="item">
+	          <div class="container">
+	            <div class="carousel-caption">
+	          	  <img src="#{resource['default:images/jeett_dt_008.png']}" width="500" height="300" alt="Java EE APIs in the EJB Container" />
+	          	  <p>Java EE APIs in the EJB Container</p>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="item">
+	          <div class="container">
+	            <div class="carousel-caption">
+	          	  <img src="#{resource['default:images/jeett_dt_009.png']}" width="500" height="300" alt="Java EE APIs in the Application Client Container" />
+	          	  <p>Java EE APIs in the Application Client Container</p>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	    </div><!-- /.carousel -->
+    
+	    <!-- Marketing messaging and featurettes
+	    ================================================== -->
+	    <!-- Wrap the rest of the page in another container to center all the content. -->
+	
+	    <div class="container marketing">
+	
+	      <div class="row featurette">
+	        <div class="col-md-7">
+	          <h2 class="featurette-heading">Multitiered Applications</h2>
+	          <p class="lead">Java EE multitiered applications are generally considered to be three-tiered applications because they are distributed over three locations: client machines, the Java EE server machine, and the database or legacy machines at the back end. Three-tiered applications that run in this way extend the standard two-tiered client-and-server model by placing a multithreaded application server between the client application and back-end storage.</p>
+	        </div>
+	        <div class="col-md-5">
+	          <img src="#{resource['default:images/jeett_dt_001.png']}" width="500" height="500" alt="Multitiered Applications" />
+	        </div>
+	      </div>
+	
+	      <hr class="featurette-divider" />
+	
+	      <div class="row featurette">
+	        <div class="col-md-5">
+	          <img src="#{resource['default:images/jeett_dt_002.png']}" width="500" height="500" alt="Server Communication" />
+	        </div>
+	        <div class="col-md-7">
+	          <h2 class="featurette-heading">Java EE Server Communications</h2>
+	          <p class="lead">The client communicates with the business tier running on the Java EE server either directly or, as in the case of a client running in a browser, by going through web pages or servlets running in the web tier.</p>
+	        </div>
+	      </div>
+	
+	      <hr class="featurette-divider" />
+	
+	      <div class="row featurette">
+	        <div class="col-md-7">
+	          <h2 class="featurette-heading">Web Tier and Java EE Applications</h2>
+	          <p class="lead">The web tier, like the client tier, might include a JavaBeans component to manage the user input and send that input to enterprise beans running in the business tier for processing.</p>
+	        </div>
+	        <div class="col-md-5">
+	          <img src="#{resource['default:images/jeett_dt_003.png']}" width="500" height="500" alt="Web Tier and Java EE Applications" />
+	        </div>
+	      </div>
+	
+		<hr class="featurette-divider" />
+	
+	      <div class="row featurette">
+	        <div class="col-md-5">
+	          <img src="#{resource['default:images/jeett_dt_004.png']}" width="500" height="500" alt="Business and EIS Tiers" />
+	        </div>
+	        <div class="col-md-7">
+	          <h2 class="featurette-heading">Business and EIS Tiers</h2>
+	          <p class="lead">Business code, which is logic that solves or meets the needs of a particular business domain such as banking, retail, or finance, is handled by enterprise beans running in either the business tier or the web tier..</p>
+	        </div>
+	      </div>
+	      
+	      <!-- /END THE FEATURETTES -->
+	
+	      <!-- FOOTER -->
+	     	<footer>
+	       <p>Materials borrowed from 
+	       	  <a href="http://docs.oracle.com/javaee/7/tutorial/doc/">Java EE 7 Tutorial</a> 
+	       	  and <a href="http://getbootstrap.com">Bootstrap</a> for academic purposes.</p>
+	     </footer>
+	
+	    </div><!-- /.container -->
+          		
+	</ui:define>
+</ui:composition>

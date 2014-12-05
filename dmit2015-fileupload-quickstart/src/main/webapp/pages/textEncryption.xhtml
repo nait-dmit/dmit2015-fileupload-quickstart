@@ -1,0 +1,44 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/template-dashboard.xhtml">
+	
+	<ui:param name="title" value="BMI Calculator" />
+	
+	<ui:define name="maincontent">
+		<div class="container">
+
+			<h1>Java Simplified Encryption</h1>
+			<h:form>
+				<p:messages id="messages" />
+				<div class="form-group">
+					<p:inputText id="cipherText"
+						value="#{encryptionBean.cipherText}"
+						placeholder="enter text to encrypt/decrypt"
+						required="true"
+						requiredMessage="Cipher text is required."
+						styleClass="form-control">
+					</p:inputText>
+					<p:inputText id="password"
+						value="#{encryptionBean.password}"
+						placeholder="enter password"
+						required="true"
+						requiredMessage="Password is required."
+						styleClass="form-control">
+					</p:inputText>
+				</div>
+				<p:commandButton ajax="false" value="Encrypt"
+					actionListener="#{encryptionBean.encrypt()}" 
+					styleClass="btn btn-primary" />
+				<p:commandButton ajax="false" value="Decrypt" 
+					actionListener="#{encryptionBean.decrypt()}"
+					styleClass="btn btn-danger" />
+			</h:form>
+		</div>
+	
+	</ui:define>
+</ui:composition>

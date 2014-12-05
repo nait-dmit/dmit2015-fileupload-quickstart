@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/template-dashboard.xhtml">
+	
+	<ui:param name="title" value="[PAGE TITLE CODE GOES HERE]" />
+	
+	<ui:define name="pageheader">
+		<link rel="stylesheet" href="#{resource['default:css/carousel.css']}" />	
+	</ui:define>
+	
+	<ui:define name="maincontent">
+		<h2>[PAGE TITLE CODE GOES HERE]</h2>
+		[PAGE CONTENT CODE GOES HERE]
+	</ui:define>
+
+</ui:composition>

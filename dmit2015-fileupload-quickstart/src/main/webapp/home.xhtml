@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/template-page.xhtml">
+	<ui:param name="title" value="DMIT2015 - Home Page" />
+
+	<ui:define name="externalstyles">
+		<link rel="stylesheet" href="#{resource['default:css/cover.css']}" />	
+	</ui:define>
+	
+	<ui:define name="page-header">
+	</ui:define>
+	
+	<ui:define name="maincontent">
+	
+	    <div class="site-wrapper">
+	
+	      <div class="site-wrapper-inner">
+	
+	        <div class="cover-container">
+	
+	          <div class="masthead clearfix">
+	            <div class="inner">
+	              <h3 class="masthead-brand">DMIT2015</h3>
+	              <ul class="nav masthead-nav">
+	                <li class="active"><a href="home.jsf">Home</a></li>
+	                <li><a href="index.jsf">Java EE</a></li>
+	              </ul>
+	            </div>
+	          </div>
+	
+	          <div class="inner cover">
+	            <h1 class="cover-heading">Enterprise Application Development</h1>
+	            <p class="lead">
+	            	An enterprise application is a big business application that must meet stringent requirements for security, administration, and maintenance. 
+	            	In this course, you learn how to use industry-standard technologies to design, build, and integrate presentation-oriented 
+	            	and service-oriented web applications that are high performing, scalable, and secure
+	            </p>
+	 			<p class="lead">
+	 				<h:outputLink value="index.jsf" styleClass="btn btn-lg btn-default">Learn More</h:outputLink>
+	 			</p>
+	          </div>
+	
+	          <div class="mastfoot">
+	            <div class="inner">
+	              Cover template copied from <a href="https://twitter.com/mdo">@mdo</a>
+	            </div>
+	          </div>
+	
+	        </div>
+	
+	      </div>
+	
+	    </div>
+    
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    	
+    </ui:define>
+    
+    <ui:define name="footer">
+    
+    </ui:define>
+    
+</ui:composition>
+
+</html>
